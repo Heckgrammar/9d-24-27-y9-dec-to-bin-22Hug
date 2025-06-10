@@ -17,8 +17,23 @@ namespace Y9_DEC_TO_BIN_SKELETON
 
             //MAIN CHALLENGE: WRITE A PROGRAM TO CONVERT ANY INTEGER TO ITS EQUIVALENT BINARY NUMBER
             //WRITE A CALL TO YOUR NUMBER CONVERSION FUNCTION HERE
-            
-            
+
+            string binary = "";
+            Console.WriteLine("Enter any integer");
+            int integer = Convert.ToInt32(Console.ReadLine());
+            while (integer > 0)
+            {
+                if (integer % 2 == 1)
+                {
+                    binary = "1" + binary;
+                }
+                else
+                {
+                    binary = "0" + binary;
+                }
+                integer /= 2;
+            }
+            Console.WriteLine(binary);
         }
 
         // LET'S USE THE 'STRUCTURED APPROACH' TO PROGRAMMING...A QUICK INTRODUCTION TO SUBBROUTINES(functions and procedures)...a.k.a. 'methods' in C#
@@ -26,9 +41,24 @@ namespace Y9_DEC_TO_BIN_SKELETON
         //...this function DOES return a value so the method must have a data type
         static string numberConversion(int number, int numberbase)
         {
-            //CODE GOES HERE
+            string result = "";
+            Console.WriteLine("Enter any integer!");
+            number = Convert.ToInt32(Console.ReadLine());
+            while (number > 0)
+            {
+                if (number % 2 == 1)
+                {
+                    result = "1" + result;
+                }
+                else
+                {
+                    result = "0" + result;
+                }
+                number /= 2;
+            }
+            Console.WriteLine(result);
 
-            return result; //REMOVE THE RED LINE!
+           return result; //REMOVE THE RED LINE!
         }
     }
 }
